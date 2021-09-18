@@ -54,7 +54,7 @@ public class PersonPayerService {
 	public PersonPayer getByParse(String voen) throws Exception {
 		List<String> list=new ArrayList<String>();
 		
-		Document d=Jsoup.connect("https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp?tip=P&voenOrName=V&voen="+voen+"&name=&submit=++Yoxla+++").post();
+		Document d=Jsoup.connect("https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp?tip=P&voenOrName=V&voen="+voen+"&name=&sub_mit=1").post();
 		Elements paragraphs=d.getElementsByTag("td");
 		
 		for(Element paragraph:paragraphs) {
