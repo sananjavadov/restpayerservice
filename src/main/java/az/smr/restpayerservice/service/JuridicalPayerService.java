@@ -33,7 +33,7 @@ public class JuridicalPayerService {
 	public JuridicalPayer getByParse(String voen) throws Exception {
 		List<String> list=new ArrayList<String>();
 		
-		Document d=Jsoup.connect("https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp?tip=L&voenOrName=V&voen="+voen+"&name=&submit=++Yoxla+++").get();
+		Document d=Jsoup.connect("https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp?tip=L&voenOrName=V&voen="+voen+"&name=&sub_mit=1").get();
 		Elements paragraphs=d.getElementsByTag("td");
 		
 		for(Element paragraph :paragraphs) {			
